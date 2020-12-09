@@ -13,7 +13,6 @@ service SerializeService {
 message MsgRequest {
   string name = 1;
   int32 id = 2;
-  bool isUser = 3;
 }
 message MsgReply {
   int32 code = 1;
