@@ -12,6 +12,7 @@ service SerializeService {
 enum ResultCode{
   SUCCESS = 0;
   SERVER_ERR = -1;
+  INVALID_PARAM = -2;
 }
 message MsgRequest {
   string name = 2;
