@@ -9,13 +9,16 @@ service SerializeService {
   rpc SendMsg (MsgRequest) returns (MsgReply) {}
 }
 
-
+enum ResultCode{
+  SUCCESS = 0;
+  SERVER_ERR = -1;
+}
 message MsgRequest {
   string name = 2;
   int32 id = 1;
   bool  isUser = 3;
 }
 message MsgReply {
-  int32 code = 1;
+  ResultCode code = 1;
   string message = 2;
 }
